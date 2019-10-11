@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Theme customizer.
  * Plugin URI: https://LoneStarWP.com/
- * Description: A sample customizer to show how its done
- * Version: 4.1.2
+ * Description: A sample customizer to show how its done - for Wordcamp DFW 2019
+ * Version: 1.0.0
  * Author: Nick Batik
  * Author URI: https://LoneStarWP.com/plugins/
  * License: GPLv2 or later
@@ -24,7 +24,7 @@ function mytheme_register_customizer( $wp_customize ) {
 	   'mytheme_first_text',
 	   array(
 		  'label'    => 'First Text',
-		  'section'  => 'mytheme_wordcamp_text',
+		  'section'  => 'colors',
 		  'settings' => 'mytheme_sample_first_text',
 	   )
 	);
