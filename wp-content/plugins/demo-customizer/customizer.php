@@ -12,6 +12,11 @@
 
 function mytheme_register_customizer( $wp_customize ) {
       
+	$wp_customize->add_section('mytheme_wordcamp_text', array(
+        'title'    => __('Wordcamp DFW Custom Text', 'mytheme'),
+        'priority' => 120,
+    ));
+    
 	$wp_customize-> add_setting(
 	   'mytheme_sample_first_text',
 	   array(
@@ -24,7 +29,7 @@ function mytheme_register_customizer( $wp_customize ) {
 	   'mytheme_first_text',
 	   array(
 		  'label'    => 'First Text',
-		  'section'  => 'colors',
+		  'section'  => 'mytheme_wordcamp_text',
 		  'settings' => 'mytheme_sample_first_text',
 	   )
 	);
