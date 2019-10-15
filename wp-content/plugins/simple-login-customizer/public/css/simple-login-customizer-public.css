@@ -1,0 +1,91 @@
+/**
+ * Example CSS
+ * @see https://codex.wordpress.org/Customizing_the_Login_Form
+ *
+ * Selectors commented out below are for reference and available
+ * to use for your styling purposes.
+ *
+ * body.login {}
+ * body.login div#login {}
+ * body.login div#login h1 {}
+ * body.login div#login h1 a {}
+ * body.login div#login form#loginform {}
+ * body.login div#login form#loginform p {}
+ * body.login div#login form#loginform p label {}
+ * body.login div#login form#loginform input {}
+ * body.login div#login form#loginform input#user_login {}
+ * body.login div#login form#loginform input#user_pass {}
+ * body.login div#login form#loginform p.forgetmenot {}
+ * body.login div#login form#loginform p.forgetmenot input#rememberme {}
+ * body.login div#login form#loginform p.submit {}
+ * body.login div#login form#loginform p.submit input#wp-submit {}
+ * body.login div#login p#nav {}
+ * body.login div#login p#nav a {}
+ * body.login div#login p#backtoblog {}
+ * body.login div#login p#backtoblog a {}
+ */
+
+
+body.login {
+	background-color: #f0f0f0;
+}
+
+body.login div#login form#loginform p label {
+	color: #454545;
+	display: block;
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+body.login div#login form#loginform input {
+	font-weight: normal;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit {
+	background: #BC0B14;
+	border: none;
+	border-radius: 0;
+	font-size: 16px;
+	padding-left: 18px;
+	padding-right: 18px;
+}
+
+body.login div#login form#loginform p.submit input#wp-submit:hover {
+	box-shadow: none;
+	background: #5c5d5a;
+}
+
+body.login div#login p#nav a,
+body.login div#login p#backtoblog a {
+	color: #fff;
+	background: #5c5d5a;
+	text-align: center;
+	display: block;
+	padding: 12px 0;
+}
+
+body.login div#login p#nav a:hover,
+body.login div#login p#backtoblog a:hover {
+	background: #BC0B14;
+}
+
+body.login div#login h1 a {
+    	  background-image: url(../img/gpl-logo.png);
+	  width: 300px;
+	  height: 149px;
+	  background-size: 300px 149px;
+}
+
+.slc-footer {
+	color:#5c5d5a;
+	text-align: center;
+	margin-top: 1em;
+	font-size: 16px;
+}
+
+.slc-footer span {
+	color: #BC0B14;
+	font-weight: bold;
+	font-size: 20px;
+	display: block;
+}
