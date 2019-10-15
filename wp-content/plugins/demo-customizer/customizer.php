@@ -17,6 +17,72 @@ function mytheme_register_customizer( $wp_customize ) {
         'priority' => 120,
     ));
     
+	 Kirki::add_field( 'theme_config_id', [
+		'type'        => 'typography',
+		'settings'    => 'my_setting',
+		'label'       => esc_html__( 'Control Label', 'kirki' ),
+		'section'     => 'mytheme_wordcamp_text',
+		'default'     => [
+			'font-family'    => 'Roboto',
+			'variant'        => 'regular',
+			'font-size'      => '14px',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
+			'color'          => '#333333',
+			'text-transform' => 'none',
+			'text-align'     => 'left',
+		],
+		'choices' => [
+		'fonts' => [
+			'google' => [ 'trending', 30 ],
+			],
+		],
+		'priority'    => 1,
+		'transport'   => 'auto',
+		'output'      => [
+			[
+				'element' => 'body',
+			],
+		],
+	] );
+	
+	Kirki::add_field( 'theme_config_id', [
+	'type'        => 'repeater',
+	'label'       => esc_html__( 'Repeater Control', 'kirki' ),
+	'section'     => 'mytheme_wordcamp_text',
+	'priority'    => 2,
+	'row_label' => [
+		'type'  => 'text',
+		'value' => esc_html__( 'Your Custom Value', 'kirki' ),
+	],
+	'button_label' => esc_html__('"Add new" button label (optional) ', 'kirki' ),
+	'settings'     => 'my_repeater_setting',
+	'default'      => [
+		[
+			'link_text' => esc_html__( 'Kirki Site', 'kirki' ),
+			'link_url'  => 'https://kirki.org/',
+		],
+		[
+			'link_text' => esc_html__( 'Kirki Repository', 'kirki' ),
+			'link_url'  => 'https://github.com/aristath/kirki',
+		],
+	],
+	'fields' => [
+		'link_text' => [
+			'type'        => 'text',
+			'label'       => esc_html__( 'Link Text', 'kirki' ),
+			'description' => esc_html__( 'This will be the label for your link', 'kirki' ),
+			'default'     => '',
+		],
+		'link_url'  => [
+			'type'        => 'text',
+			'label'       => esc_html__( 'Link URL', 'kirki' ),
+			'description' => esc_html__( 'This will be the link URL', 'kirki' ),
+			'default'     => '',
+		],
+	]
+] );
+	
 	$wp_customize-> add_setting(
 	   'mytheme_sample_first_text',
 	   array(
@@ -117,7 +183,7 @@ function mytheme_register_customizer( $wp_customize ) {
     //  = File Upload               =
     //  =============================
     $wp_customize->add_setting('themename_theme_options[upload_test]', array(
-        'default'           => 'arse',
+        'default'           => '',
         'capability'        => 'edit_theme_options',
         'type'           => 'option',
     ));
