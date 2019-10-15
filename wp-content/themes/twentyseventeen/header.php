@@ -34,6 +34,7 @@
 		<?php if ( has_nav_menu( 'top' ) ) : ?>
 			<div class="navigation-top">
 				<div class="wrap">
+					<h1><?php echo get_theme_mod( 'mytheme_sample_first_text', 'This is default text' ) ?></h1>
 					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
 				</div><!-- .wrap -->
 			</div><!-- .navigation-top -->
